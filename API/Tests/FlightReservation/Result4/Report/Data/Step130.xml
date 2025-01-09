@@ -1,0 +1,31 @@
+<?xml-stylesheet href="..//StServiceCallActivity.xsl" type="text/xsl"?><report><VTD_Type name="Type">HP.ST.Ext.WebServicesActivities.StServiceCallActivity</VTD_Type><VTD_Name name="Step ID">StServiceCallActivity5</VTD_Name><InputXml name="InputXml" xml="True" link="True" FileLocation="StServiceCallActivity5_InputXml_43bfdbf1-bc12-45b4-af20-ae37ea580afa.xml">&lt;Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/" xmlns:p1="http://www.w3.org/2001/XMLSchema-instance"&gt;
+  &lt;Body&gt;
+    &lt;CreateFlightOrder xmlns="HP.SOAQ.SampleApp"&gt;
+      &lt;FlightOrder&gt;
+        &lt;Class&gt;Economy&lt;/Class&gt;
+        &lt;CustomerName&gt;Rakesh Krishnan&lt;/CustomerName&gt;
+        &lt;DepartureDate&gt;2025-01-30T00:00:00+05:30&lt;/DepartureDate&gt;
+        &lt;FlightNumber&gt;19395&lt;/FlightNumber&gt;
+        &lt;NumberOfTickets&gt;2&lt;/NumberOfTickets&gt;
+      &lt;/FlightOrder&gt;
+    &lt;/CreateFlightOrder&gt;
+  &lt;/Body&gt;
+&lt;/Envelope&gt;</InputXml><Service name="Service">Flights_Service</Service><Port name="Port">FlightsServiceMethods</Port><Operation name="Operation">CreateFlightOrder</Operation><Address name="Address">http://localhost:8000/Flights_SOAP</Address><SOAPAction name="SOAPAction">HP.SOAQ.SampleApp/IFlightsSoapService/CreateFlightOrder</SOAPAction><ContentType name="ContentType">text/xml; charset=utf-8</ContentType><MessageExchangePattern name="MessageExchangePattern">Request Response</MessageExchangePattern><Full_request name="Full request" TooLong="True" link="True" FileLocation="StServiceCallActivity5_Full_request_78e2cbd8-7ee1-4953-9437-98a64ac76bf7.xml">&lt;?xml version="1.0"? ... &lt;/Body&gt;
+&lt;/Envelope&gt;</Full_request><InputHeader name="InputHeader">SOAPAction:	HP.SOAQ.SampleApp/IFlightsSoapService/CreateFlightOrder
+Content-Type:	text/xml; charset=utf-8
+Host:	localhost:8000
+Content-Length:	421
+Connection:	Close
+</InputHeader><OutputHeader name="OutputHeader">Connection:	close
+Content-Length:	229
+Content-Type:	text/xml; charset=utf-8
+Date:	Mon, 06 Jan 2025 11:22:30 GMT
+Server:	Microsoft-HTTPAPI/2.0
+</OutputHeader><OutputText name="OutputText">&lt;s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"&gt;&lt;s:Body&gt;&lt;s:Fault&gt;&lt;faultcode&gt;s:Client&lt;/faultcode&gt;&lt;faultstring xml:lang="en-IN"&gt;This flight does not depart on this date.&lt;/faultstring&gt;&lt;/s:Fault&gt;&lt;/s:Body&gt;&lt;/s:Envelope&gt;</OutputText><HttpStatusCode name="HttpStatusCode">500 : InternalServerError</HttpStatusCode><OutputXml name="OutputXml" xml="True" link="True" FileLocation="StServiceCallActivity5_OutputXml_95de55ec-6e89-4132-a11e-47cd22938a90.xml">&lt;s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"&gt;
+  &lt;s:Body&gt;
+    &lt;s:Fault&gt;
+      &lt;faultcode&gt;s:Client&lt;/faultcode&gt;
+      &lt;faultstring xml:lang="en-IN"&gt;This flight does not depart on this date.&lt;/faultstring&gt;
+    &lt;/s:Fault&gt;
+  &lt;/s:Body&gt;
+&lt;/s:Envelope&gt;</OutputXml><VTD_Message name="Message">The server has returned a soap fault</VTD_Message><Name name="Name">'CreateFlightOrder'</Name><Comment name="Comment">''</Comment><VTD_Status name="Status">Failure</VTD_Status><VTD_Details name="Details">CreateFlightOrder ended unsuccessfully</VTD_Details></report>

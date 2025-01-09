@@ -1,0 +1,102 @@
+<?xml-stylesheet href="..//StServiceCallActivity.xsl" type="text/xsl"?><report><VTD_Type name="Type">HP.ST.Ext.WebServicesActivities.StServiceCallActivity</VTD_Type><VTD_Name name="Step ID">StServiceCallActivity5</VTD_Name><InputXml name="InputXml" xml="True" link="True" FileLocation="StServiceCallActivity5_InputXml_cdfe2dbd-a5a0-41e8-bf74-c00b330d9370.xml">&lt;Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/" xmlns:p1="http://www.w3.org/2001/XMLSchema-instance"&gt;
+  &lt;Body&gt;
+    &lt;CreateFlightOrder xmlns="HP.SOAQ.SampleApp"&gt;
+      &lt;FlightOrder&gt;
+        &lt;Class&gt;Economy&lt;/Class&gt;
+        &lt;CustomerName&gt;Rakesh Krishnan&lt;/CustomerName&gt;
+        &lt;DepartureDate /&gt;
+        &lt;FlightNumber&gt;19134&lt;/FlightNumber&gt;
+        &lt;NumberOfTickets&gt;2&lt;/NumberOfTickets&gt;
+      &lt;/FlightOrder&gt;
+    &lt;/CreateFlightOrder&gt;
+  &lt;/Body&gt;
+&lt;/Envelope&gt;</InputXml><Service name="Service">Flights_Service</Service><Port name="Port">FlightsServiceMethods</Port><Operation name="Operation">CreateFlightOrder</Operation><Address name="Address">http://localhost:8000/Flights_SOAP</Address><SOAPAction name="SOAPAction">HP.SOAQ.SampleApp/IFlightsSoapService/CreateFlightOrder</SOAPAction><ContentType name="ContentType">text/xml; charset=utf-8</ContentType><MessageExchangePattern name="MessageExchangePattern">Request Response</MessageExchangePattern><Full_request name="Full request" TooLong="True" link="True" FileLocation="StServiceCallActivity5_Full_request_a5e617dc-ddd6-4022-8993-8e54f2f8688b.xml">&lt;?xml version="1.0"? ... &lt;/Body&gt;
+&lt;/Envelope&gt;</Full_request><InputHeader name="InputHeader">SOAPAction:	HP.SOAQ.SampleApp/IFlightsSoapService/CreateFlightOrder
+Content-Type:	text/xml; charset=utf-8
+Host:	localhost:8000
+Content-Length:	382
+Connection:	Close
+</InputHeader><OutputHeader name="OutputHeader">Connection:	close
+Content-Length:	5755
+Content-Type:	text/xml; charset=utf-8
+Date:	Mon, 06 Jan 2025 11:21:12 GMT
+Server:	Microsoft-HTTPAPI/2.0
+</OutputHeader><OutputText name="OutputText">&lt;s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"&gt;&lt;s:Body&gt;&lt;s:Fault&gt;&lt;faultcode xmlns:a="http://schemas.microsoft.com/net/2005/12/windowscommunicationfoundation/dispatcher"&gt;a:DeserializationFailed&lt;/faultcode&gt;&lt;faultstring xml:lang="en-IN"&gt;The formatter threw an exception while trying to deserialize the message: There was an error while trying to deserialize parameter HP.SOAQ.SampleApp:FlightOrder. The InnerException message was 'There was an error deserializing the object of type FlightsServiceLib.FlightOrderDetails. The value '' cannot be parsed as the type 'DateTime'.'.  Please see InnerException for more details.&lt;/faultstring&gt;&lt;detail&gt;&lt;ExceptionDetail xmlns="http://schemas.datacontract.org/2004/07/System.ServiceModel" xmlns:i="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;HelpLink i:nil="true"/&gt;&lt;InnerException&gt;&lt;HelpLink i:nil="true"/&gt;&lt;InnerException&gt;&lt;HelpLink i:nil="true"/&gt;&lt;InnerException&gt;&lt;HelpLink i:nil="true"/&gt;&lt;InnerException i:nil="true"/&gt;&lt;Message&gt;String was not recognized as a valid DateTime.&lt;/Message&gt;&lt;StackTrace&gt;   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)&amp;#xD;
+   at System.Xml.XmlDictionaryReader.ReadElementContentAsDateTime()&lt;/StackTrace&gt;&lt;Type&gt;System.FormatException&lt;/Type&gt;&lt;/InnerException&gt;&lt;Message&gt;The value '' cannot be parsed as the type 'DateTime'.&lt;/Message&gt;&lt;StackTrace&gt;   at System.Xml.XmlDictionaryReader.ReadElementContentAsDateTime()&amp;#xD;
+   at System.Runtime.Serialization.XmlReaderDelegator.ReadElementContentAsDateTime()&amp;#xD;
+   at ReadFlightOrderDetailsFromXml(XmlReaderDelegator , XmlObjectSerializerReadContext , XmlDictionaryString[] , XmlDictionaryString[] )&amp;#xD;
+   at System.Runtime.Serialization.ClassDataContract.ReadXmlValue(XmlReaderDelegator xmlReader, XmlObjectSerializerReadContext context)&amp;#xD;
+   at System.Runtime.Serialization.XmlObjectSerializerReadContext.ReadDataContractValue(DataContract dataContract, XmlReaderDelegator reader)&amp;#xD;
+   at System.Runtime.Serialization.XmlObjectSerializerReadContext.InternalDeserialize(XmlReaderDelegator reader, String name, String ns, Type declaredType, DataContract&amp;amp; dataContract)&amp;#xD;
+   at System.Runtime.Serialization.XmlObjectSerializerReadContext.InternalDeserialize(XmlReaderDelegator xmlReader, Type declaredType, DataContract dataContract, String name, String ns)&amp;#xD;
+   at System.Runtime.Serialization.DataContractSerializer.InternalReadObject(XmlReaderDelegator xmlReader, Boolean verifyObjectName, DataContractResolver dataContractResolver)&amp;#xD;
+   at System.Runtime.Serialization.XmlObjectSerializer.ReadObjectHandleExceptions(XmlReaderDelegator reader, Boolean verifyObjectName, DataContractResolver dataContractResolver)&lt;/StackTrace&gt;&lt;Type&gt;System.Xml.XmlException&lt;/Type&gt;&lt;/InnerException&gt;&lt;Message&gt;There was an error deserializing the object of type FlightsServiceLib.FlightOrderDetails. The value '' cannot be parsed as the type 'DateTime'.&lt;/Message&gt;&lt;StackTrace&gt;   at System.Runtime.Serialization.XmlObjectSerializer.ReadObjectHandleExceptions(XmlReaderDelegator reader, Boolean verifyObjectName, DataContractResolver dataContractResolver)&amp;#xD;
+   at System.Runtime.Serialization.DataContractSerializer.ReadObject(XmlDictionaryReader reader, Boolean verifyObjectName)&amp;#xD;
+   at System.ServiceModel.Dispatcher.DataContractSerializerOperationFormatter.PartInfo.ReadObject(XmlDictionaryReader reader, XmlObjectSerializer serializer)&amp;#xD;
+   at System.ServiceModel.Dispatcher.DataContractSerializerOperationFormatter.DeserializeParameterPart(XmlDictionaryReader reader, PartInfo part, Boolean isRequest)&lt;/StackTrace&gt;&lt;Type&gt;System.Runtime.Serialization.SerializationException&lt;/Type&gt;&lt;/InnerException&gt;&lt;Message&gt;The formatter threw an exception while trying to deserialize the message: There was an error while trying to deserialize parameter HP.SOAQ.SampleApp:FlightOrder. The InnerException message was 'There was an error deserializing the object of type FlightsServiceLib.FlightOrderDetails. The value '' cannot be parsed as the type 'DateTime'.'.  Please see InnerException for more details.&lt;/Message&gt;&lt;StackTrace&gt;   at System.ServiceModel.Dispatcher.DataContractSerializerOperationFormatter.DeserializeParameterPart(XmlDictionaryReader reader, PartInfo part, Boolean isRequest)&amp;#xD;
+   at System.ServiceModel.Dispatcher.DataContractSerializerOperationFormatter.DeserializeParameter(XmlDictionaryReader reader, PartInfo part, Boolean isRequest)&amp;#xD;
+   at System.ServiceModel.Dispatcher.DataContractSerializerOperationFormatter.DeserializeParameters(XmlDictionaryReader reader, PartInfo[] parts, Object[] parameters, Boolean isRequest)&amp;#xD;
+   at System.ServiceModel.Dispatcher.DataContractSerializerOperationFormatter.DeserializeBody(XmlDictionaryReader reader, MessageVersion version, String action, MessageDescription messageDescription, Object[] parameters, Boolean isRequest)&amp;#xD;
+   at System.ServiceModel.Dispatcher.OperationFormatter.DeserializeBodyContents(Message message, Object[] parameters, Boolean isRequest)&amp;#xD;
+   at System.ServiceModel.Dispatcher.OperationFormatter.DeserializeRequest(Message message, Object[] parameters)&amp;#xD;
+   at System.ServiceModel.Dispatcher.DispatchOperationRuntime.DeserializeInputs(MessageRpc&amp;amp; rpc)&amp;#xD;
+   at System.ServiceModel.Dispatcher.DispatchOperationRuntime.InvokeBegin(MessageRpc&amp;amp; rpc)&amp;#xD;
+   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage5(MessageRpc&amp;amp; rpc)&amp;#xD;
+   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage41(MessageRpc&amp;amp; rpc)&amp;#xD;
+   at System.ServiceModel.Dispatcher.MessageRpc.Process(Boolean isOperationContextSet)&lt;/StackTrace&gt;&lt;Type&gt;System.ServiceModel.Dispatcher.NetDispatcherFaultException&lt;/Type&gt;&lt;/ExceptionDetail&gt;&lt;/detail&gt;&lt;/s:Fault&gt;&lt;/s:Body&gt;&lt;/s:Envelope&gt;</OutputText><HttpStatusCode name="HttpStatusCode">500 : InternalServerError</HttpStatusCode><OutputXml name="OutputXml" xml="True" link="True" FileLocation="StServiceCallActivity5_OutputXml_f90c3f0f-680c-416e-be89-3acd676cbadc.xml">&lt;s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"&gt;
+  &lt;s:Body&gt;
+    &lt;s:Fault&gt;
+      &lt;faultcode xmlns:a="http://schemas.microsoft.com/net/2005/12/windowscommunicationfoundation/dispatcher"&gt;a:DeserializationFailed&lt;/faultcode&gt;
+      &lt;faultstring xml:lang="en-IN"&gt;The formatter threw an exception while trying to deserialize the message: There was an error while trying to deserialize parameter HP.SOAQ.SampleApp:FlightOrder. The InnerException message was 'There was an error deserializing the object of type FlightsServiceLib.FlightOrderDetails. The value '' cannot be parsed as the type 'DateTime'.'.  Please see InnerException for more details.&lt;/faultstring&gt;
+      &lt;detail&gt;
+        &lt;ExceptionDetail xmlns="http://schemas.datacontract.org/2004/07/System.ServiceModel" xmlns:i="http://www.w3.org/2001/XMLSchema-instance"&gt;
+          &lt;HelpLink i:nil="true" /&gt;
+          &lt;InnerException&gt;
+            &lt;HelpLink i:nil="true" /&gt;
+            &lt;InnerException&gt;
+              &lt;HelpLink i:nil="true" /&gt;
+              &lt;InnerException&gt;
+                &lt;HelpLink i:nil="true" /&gt;
+                &lt;InnerException i:nil="true" /&gt;
+                &lt;Message&gt;String was not recognized as a valid DateTime.&lt;/Message&gt;
+                &lt;StackTrace&gt;   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.Xml.XmlDictionaryReader.ReadElementContentAsDateTime()&lt;/StackTrace&gt;
+                &lt;Type&gt;System.FormatException&lt;/Type&gt;
+              &lt;/InnerException&gt;
+              &lt;Message&gt;The value '' cannot be parsed as the type 'DateTime'.&lt;/Message&gt;
+              &lt;StackTrace&gt;   at System.Xml.XmlDictionaryReader.ReadElementContentAsDateTime()
+   at System.Runtime.Serialization.XmlReaderDelegator.ReadElementContentAsDateTime()
+   at ReadFlightOrderDetailsFromXml(XmlReaderDelegator , XmlObjectSerializerReadContext , XmlDictionaryString[] , XmlDictionaryString[] )
+   at System.Runtime.Serialization.ClassDataContract.ReadXmlValue(XmlReaderDelegator xmlReader, XmlObjectSerializerReadContext context)
+   at System.Runtime.Serialization.XmlObjectSerializerReadContext.ReadDataContractValue(DataContract dataContract, XmlReaderDelegator reader)
+   at System.Runtime.Serialization.XmlObjectSerializerReadContext.InternalDeserialize(XmlReaderDelegator reader, String name, String ns, Type declaredType, DataContract&amp;amp; dataContract)
+   at System.Runtime.Serialization.XmlObjectSerializerReadContext.InternalDeserialize(XmlReaderDelegator xmlReader, Type declaredType, DataContract dataContract, String name, String ns)
+   at System.Runtime.Serialization.DataContractSerializer.InternalReadObject(XmlReaderDelegator xmlReader, Boolean verifyObjectName, DataContractResolver dataContractResolver)
+   at System.Runtime.Serialization.XmlObjectSerializer.ReadObjectHandleExceptions(XmlReaderDelegator reader, Boolean verifyObjectName, DataContractResolver dataContractResolver)&lt;/StackTrace&gt;
+              &lt;Type&gt;System.Xml.XmlException&lt;/Type&gt;
+            &lt;/InnerException&gt;
+            &lt;Message&gt;There was an error deserializing the object of type FlightsServiceLib.FlightOrderDetails. The value '' cannot be parsed as the type 'DateTime'.&lt;/Message&gt;
+            &lt;StackTrace&gt;   at System.Runtime.Serialization.XmlObjectSerializer.ReadObjectHandleExceptions(XmlReaderDelegator reader, Boolean verifyObjectName, DataContractResolver dataContractResolver)
+   at System.Runtime.Serialization.DataContractSerializer.ReadObject(XmlDictionaryReader reader, Boolean verifyObjectName)
+   at System.ServiceModel.Dispatcher.DataContractSerializerOperationFormatter.PartInfo.ReadObject(XmlDictionaryReader reader, XmlObjectSerializer serializer)
+   at System.ServiceModel.Dispatcher.DataContractSerializerOperationFormatter.DeserializeParameterPart(XmlDictionaryReader reader, PartInfo part, Boolean isRequest)&lt;/StackTrace&gt;
+            &lt;Type&gt;System.Runtime.Serialization.SerializationException&lt;/Type&gt;
+          &lt;/InnerException&gt;
+          &lt;Message&gt;The formatter threw an exception while trying to deserialize the message: There was an error while trying to deserialize parameter HP.SOAQ.SampleApp:FlightOrder. The InnerException message was 'There was an error deserializing the object of type FlightsServiceLib.FlightOrderDetails. The value '' cannot be parsed as the type 'DateTime'.'.  Please see InnerException for more details.&lt;/Message&gt;
+          &lt;StackTrace&gt;   at System.ServiceModel.Dispatcher.DataContractSerializerOperationFormatter.DeserializeParameterPart(XmlDictionaryReader reader, PartInfo part, Boolean isRequest)
+   at System.ServiceModel.Dispatcher.DataContractSerializerOperationFormatter.DeserializeParameter(XmlDictionaryReader reader, PartInfo part, Boolean isRequest)
+   at System.ServiceModel.Dispatcher.DataContractSerializerOperationFormatter.DeserializeParameters(XmlDictionaryReader reader, PartInfo[] parts, Object[] parameters, Boolean isRequest)
+   at System.ServiceModel.Dispatcher.DataContractSerializerOperationFormatter.DeserializeBody(XmlDictionaryReader reader, MessageVersion version, String action, MessageDescription messageDescription, Object[] parameters, Boolean isRequest)
+   at System.ServiceModel.Dispatcher.OperationFormatter.DeserializeBodyContents(Message message, Object[] parameters, Boolean isRequest)
+   at System.ServiceModel.Dispatcher.OperationFormatter.DeserializeRequest(Message message, Object[] parameters)
+   at System.ServiceModel.Dispatcher.DispatchOperationRuntime.DeserializeInputs(MessageRpc&amp;amp; rpc)
+   at System.ServiceModel.Dispatcher.DispatchOperationRuntime.InvokeBegin(MessageRpc&amp;amp; rpc)
+   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage5(MessageRpc&amp;amp; rpc)
+   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage41(MessageRpc&amp;amp; rpc)
+   at System.ServiceModel.Dispatcher.MessageRpc.Process(Boolean isOperationContextSet)&lt;/StackTrace&gt;
+          &lt;Type&gt;System.ServiceModel.Dispatcher.NetDispatcherFaultException&lt;/Type&gt;
+        &lt;/ExceptionDetail&gt;
+      &lt;/detail&gt;
+    &lt;/s:Fault&gt;
+  &lt;/s:Body&gt;
+&lt;/s:Envelope&gt;</OutputXml><VTD_Message name="Message">The server has returned a soap fault</VTD_Message><Name name="Name">'CreateFlightOrder'</Name><Comment name="Comment">''</Comment><VTD_Status name="Status">Failure</VTD_Status><VTD_Details name="Details">CreateFlightOrder ended unsuccessfully</VTD_Details></report>

@@ -1,0 +1,48 @@
+<?xml-stylesheet type='text/xsl' href='..//CheckpointsTree.xsl'?>
+<Report>
+  <Checkpoint>
+    <VTD_Type name="Type">HP.ST.Ext.CheckpointRules.ArrayCheckpoints.ArrayElementCPRule</VTD_Type>
+    <VTD_Name name="Name">Flight[1]</VTD_Name>
+    <Name name="Name">Checkpoint</Name>
+    <VTD_Operation name="Operation">Array - Element</VTD_Operation>
+    <VTD_Status name="Status" code="Failure">Failure</VTD_Status>
+  </Checkpoint>
+  <Checkpoint>
+    <VTD_Type name="Type">HP.ST.Fwk.RunTimeFWK.CheckpointFWK.ValueCPRule</VTD_Type>
+    <VTD_Name name="Name">Checkpoint 1</VTD_Name>
+    <Name name="Name">Checkpoint</Name>
+    <VTD_Details name="Details">
+    </VTD_Details>
+    <VTD_Operation name="Operation">=</VTD_Operation>
+    <VTD_Expected name="Expected">AF</VTD_Expected>
+    <VTD_Actual name="Actual">AA</VTD_Actual>
+    <VTD_Status name="Status" code="Failure">Failure</VTD_Status>
+    <VTD_Xpath name="Xpath">Envelope[1]/Body[1]/GetFlightsResponse[1]/GetFlightsResult[1]/Flight[1]/Airline[1]</VTD_Xpath>
+  </Checkpoint>
+  <Checkpoint>
+    <VTD_Type name="Type">HP.ST.Fwk.RunTimeFWK.CheckpointFWK.ValueCPRule</VTD_Type>
+    <VTD_Name name="Name">Checkpoint 2</VTD_Name>
+    <Name name="Name">Checkpoint</Name>
+    <VTD_Details name="Details">
+    </VTD_Details>
+    <VTD_Operation name="Operation">=</VTD_Operation>
+    <VTD_Expected name="Expected">Los Angeles</VTD_Expected>
+    <VTD_Actual name="Actual">Los Angeles</VTD_Actual>
+    <VTD_Status name="Status" code="Success">Success</VTD_Status>
+    <VTD_Xpath name="Xpath">Envelope[1]/Body[1]/GetFlightsResponse[1]/GetFlightsResult[1]/Flight[1]/ArrivalCity[1]</VTD_Xpath>
+  </Checkpoint>
+  <Checkpoint>
+    <VTD_Type name="Type">HP.ST.Fwk.RunTimeFWK.CheckpointFWK.ValueCPRule</VTD_Type>
+    <VTD_Name name="Name">Checkpoint 3</VTD_Name>
+    <Name name="Name">Checkpoint</Name>
+    <VTD_Details name="Details">
+    </VTD_Details>
+    <VTD_Operation name="Operation">=</VTD_Operation>
+    <VTD_Expected name="Expected">London</VTD_Expected>
+    <VTD_Actual name="Actual">London</VTD_Actual>
+    <VTD_Status name="Status" code="Success">Success</VTD_Status>
+    <VTD_Xpath name="Xpath">Envelope[1]/Body[1]/GetFlightsResponse[1]/GetFlightsResult[1]/Flight[1]/DepartureCity[1]</VTD_Xpath>
+  </Checkpoint>
+  <Map>[0,1,1,1]</Map>
+  <ParentsMap>[1]</ParentsMap>
+</Report>

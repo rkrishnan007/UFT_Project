@@ -1,0 +1,7 @@
+﻿<Properties>
+  <WatchEntry0 value="Trim(ObjWebTable.GetCellData(j, 2))" />
+  <WatchEntry1 value="Trim(ArrProducts(i))" />
+  <WatchEntry2 value="UBound(ArrProducts) -1" />
+  <WatchEntry3 value="intAmount + str_SubTotal_Checkout" />
+  <WatchEntry4 value="intTotal" />
+</Properties>

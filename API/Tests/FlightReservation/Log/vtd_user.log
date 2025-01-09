@@ -1,0 +1,261 @@
+2025-01-06 18:15:19,901 [1] INFO  - Loaded appender: FileAppenderInternal
+2025-01-06 18:15:19,916 [1] INFO  - Loaded appender: FileAppenderExternal
+2025-01-06 18:15:19,916 [1] INFO  - Loaded appender: UserLoggerAppender
+2025-01-06 18:15:19,917 [1] INFO  - Loaded appender: FileAppenderInternal
+2025-01-06 18:15:19,917 [1] INFO  - Loaded appender: FileAppenderExternal
+2025-01-06 18:15:19,917 [1] INFO  - Loaded appender: UserLoggerAppender
+2025-01-06 18:15:20,257 [9] INFO  - Step 'Start' : Step 'Start' started
+2025-01-06 18:15:20,289 [9] INFO  - Step 'Start' ended successfully
+2025-01-06 18:15:20,291 [9] INFO  - Step 'Test Flow' : Step 'Test Flow' started
+2025-01-06 18:15:20,295 [9] INFO  - Step 'Iteration 1' : Step 'Iteration 1' started
+2025-01-06 18:15:20,295 [9] INFO  - Step 'GetFlights' : Step 'GetFlights' started
+2025-01-06 18:15:20,305 [9] INFO  - 
+Request:
+
+<Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/">
+  <Body>
+    <GetFlights xmlns="HP.SOAQ.SampleApp">
+      <DepartureCity>London</DepartureCity>
+      <ArrivalCity>Los Angeles</ArrivalCity>
+      <FlightDate>2025-01-14T00:00:00+05:30</FlightDate>
+    </GetFlights>
+  </Body>
+</Envelope>
+
+2025-01-06 18:15:20,307 [9] INFO  - URL: http://localhost:8000/Flights_SOAP
+2025-01-06 18:15:20,337 [9] INFO  - Returning the response to the previous channel
+2025-01-06 18:15:20,337 [9] INFO  - 
+Response:
+
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Body>
+    <GetFlightsResponse xmlns="HP.SOAQ.SampleApp">
+      <GetFlightsResult xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+        <Flight>
+          <Airline>AA</Airline>
+          <ArrivalCity>Los Angeles</ArrivalCity>
+          <ArrivalTime>08:53 AM</ArrivalTime>
+          <DepartureCity>London</DepartureCity>
+          <DepartureTime>08:09 AM</DepartureTime>
+          <FlightNumber>17979</FlightNumber>
+          <Price>179.47</Price>
+        </Flight>
+        <Flight>
+          <Airline>AF</Airline>
+          <ArrivalCity>Los Angeles</ArrivalCity>
+          <ArrivalTime>10:00 AM</ArrivalTime>
+          <DepartureCity>London</DepartureCity>
+          <DepartureTime>08:00 AM</DepartureTime>
+          <FlightNumber>19072</FlightNumber>
+          <Price>161.9</Price>
+        </Flight>
+        <Flight>
+          <Airline>AA</Airline>
+          <ArrivalCity>Los Angeles</ArrivalCity>
+          <ArrivalTime>08:45 AM</ArrivalTime>
+          <DepartureCity>London</DepartureCity>
+          <DepartureTime>08:00 AM</DepartureTime>
+          <FlightNumber>19074</FlightNumber>
+          <Price>105.4</Price>
+        </Flight>
+        <Flight>
+          <Airline>AF</Airline>
+          <ArrivalCity>Los Angeles</ArrivalCity>
+          <ArrivalTime>11:30 AM</ArrivalTime>
+          <DepartureCity>London</DepartureCity>
+          <DepartureTime>08:00 AM</DepartureTime>
+          <FlightNumber>19075</FlightNumber>
+          <Price>173.47</Price>
+        </Flight>
+        <Flight>
+          <Airline>AA</Airline>
+          <ArrivalCity>Los Angeles</ArrivalCity>
+          <ArrivalTime>11:09 AM</ArrivalTime>
+          <DepartureCity>London</DepartureCity>
+          <DepartureTime>10:24 AM</DepartureTime>
+          <FlightNumber>19078</FlightNumber>
+          <Price>104</Price>
+        </Flight>
+        <Flight>
+          <Airline>AA</Airline>
+          <ArrivalCity>Los Angeles</ArrivalCity>
+          <ArrivalTime>01:33 PM</ArrivalTime>
+          <DepartureCity>London</DepartureCity>
+          <DepartureTime>12:48 PM</DepartureTime>
+          <FlightNumber>19082</FlightNumber>
+          <Price>106</Price>
+        </Flight>
+        <Flight>
+          <Airline>DL</Airline>
+          <ArrivalCity>Los Angeles</ArrivalCity>
+          <ArrivalTime>04:42 PM</ArrivalTime>
+          <DepartureCity>London</DepartureCity>
+          <DepartureTime>03:12 PM</DepartureTime>
+          <FlightNumber>19085</FlightNumber>
+          <Price>178.47</Price>
+        </Flight>
+        <Flight>
+          <Airline>AA</Airline>
+          <ArrivalCity>Los Angeles</ArrivalCity>
+          <ArrivalTime>03:57 PM</ArrivalTime>
+          <DepartureCity>London</DepartureCity>
+          <DepartureTime>03:12 PM</DepartureTime>
+          <FlightNumber>19086</FlightNumber>
+          <Price>105.3</Price>
+        </Flight>
+        <Flight>
+          <Airline>AA</Airline>
+          <ArrivalCity>Los Angeles</ArrivalCity>
+          <ArrivalTime>06:29 PM</ArrivalTime>
+          <DepartureCity>London</DepartureCity>
+          <DepartureTime>05:45 PM</DepartureTime>
+          <FlightNumber>19395</FlightNumber>
+          <Price>110.8</Price>
+        </Flight>
+        <Flight>
+          <Airline>AA</Airline>
+          <ArrivalCity>Los Angeles</ArrivalCity>
+          <ArrivalTime>01:41 PM</ArrivalTime>
+          <DepartureCity>London</DepartureCity>
+          <DepartureTime>12:57 PM</DepartureTime>
+          <FlightNumber>19689</FlightNumber>
+          <Price>120.4</Price>
+        </Flight>
+      </GetFlightsResult>
+    </GetFlightsResponse>
+  </s:Body>
+</s:Envelope>
+
+2025-01-06 18:15:20,353 [9] INFO  - Structural Validation: True
+2025-01-06 18:15:20,371 [9] INFO  - Checkpoint 3: "AA" = "AA" passed
+2025-01-06 18:15:20,373 [9] INFO  - Checkpoint 4: "Los Angeles" = "Los Angeles" passed
+2025-01-06 18:15:20,373 [9] INFO  - Checkpoint 5: "London" = "London" passed
+2025-01-06 18:15:20,373 [9] INFO  - Step 'GetFlights' ended successfully
+2025-01-06 18:15:20,373 [9] INFO  - Step 'Display Flight No' : Step 'Display Flight No' started
+2025-01-06 18:15:20,385 [9] INFO  - Step 'Display Flight No' : Input Parameter 'Prefix', Value: 'We are Selecting the flight No'
+2025-01-06 18:15:20,385 [9] INFO  - Step 'Display Flight No' : Input Parameter 'Suffix', Value: '17979'
+2025-01-06 18:15:20,395 [9] INFO  - Step 'Display Flight No' : Output Parameter 'Result', Value: 'We are Selecting the flight No17979'
+2025-01-06 18:15:20,395 [9] INFO  - Checkpoint 6: "We are Selecting the flight No17979" Contains "17979" passed
+2025-01-06 18:15:20,401 [9] INFO  - Step 'Display Flight No' ended successfully
+2025-01-06 18:15:20,402 [9] INFO  - Step 'CreateFlightOrder' : Step 'CreateFlightOrder' started
+2025-01-06 18:15:20,402 [9] INFO  - 
+Request:
+
+<Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/" xmlns:p1="http://www.w3.org/2001/XMLSchema-instance">
+  <Body>
+    <CreateFlightOrder xmlns="HP.SOAQ.SampleApp">
+      <FlightOrder>
+        <Class>Economy</Class>
+        <CustomerName>Rakesh Krishnan</CustomerName>
+        <DepartureDate>2025-01-14T00:00:00+05:30</DepartureDate>
+        <FlightNumber>17979</FlightNumber>
+        <NumberOfTickets>2</NumberOfTickets>
+      </FlightOrder>
+    </CreateFlightOrder>
+  </Body>
+</Envelope>
+
+2025-01-06 18:15:20,405 [9] INFO  - URL: http://localhost:8000/Flights_SOAP
+2025-01-06 18:15:20,409 [9] INFO  - Returning the response to the previous channel
+2025-01-06 18:15:20,409 [9] INFO  - 
+Response:
+
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Body>
+    <CreateFlightOrderResponse xmlns="HP.SOAQ.SampleApp">
+      <CreateFlightOrderResult xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+        <OrderNumber>101</OrderNumber>
+        <TotalPrice>1076.82007</TotalPrice>
+      </CreateFlightOrderResult>
+    </CreateFlightOrderResponse>
+  </s:Body>
+</s:Envelope>
+
+2025-01-06 18:15:20,416 [9] INFO  - Structural Validation: True
+2025-01-06 18:15:20,438 [9] INFO  - Step 'CreateFlightOrder' ended successfully
+2025-01-06 18:15:20,442 [9] INFO  - Step 'Display Flight Order No' : Step 'Display Flight Order No' started
+2025-01-06 18:15:20,445 [9] INFO  - Step 'Display Flight Order No' : Input Parameter 'Prefix', Value: 'Flight Reservation has been created with No:'
+2025-01-06 18:15:20,446 [9] INFO  - Step 'Display Flight Order No' : Input Parameter 'Suffix', Value: '101'
+2025-01-06 18:15:20,451 [9] INFO  - Step 'Display Flight Order No' : Output Parameter 'Result', Value: 'Flight Reservation has been created with No:101'
+2025-01-06 18:15:20,455 [9] INFO  - Checkpoint 8: "Flight Reservation has been created with No:101" Regex "101" passed
+2025-01-06 18:15:20,457 [9] INFO  - Step 'Display Flight Order No' ended successfully
+2025-01-06 18:15:20,459 [9] INFO  - Step 'GetFlightOrders' : Step 'GetFlightOrders' started
+2025-01-06 18:15:20,465 [9] INFO  - 
+Request:
+
+<Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/" xmlns:p1="http://www.w3.org/2001/XMLSchema-instance">
+  <Body>
+    <GetFlightOrders xmlns="HP.SOAQ.SampleApp">
+      <FlightsDetails>
+        <OrderNumber>101</OrderNumber>
+      </FlightsDetails>
+    </GetFlightOrders>
+  </Body>
+</Envelope>
+
+2025-01-06 18:15:20,467 [9] INFO  - URL: http://localhost:8000/Flights_SOAP
+2025-01-06 18:15:20,467 [9] INFO  - Returning the response to the previous channel
+2025-01-06 18:15:20,467 [9] INFO  - 
+Response:
+
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Body>
+    <GetFlightOrdersResponse xmlns="HP.SOAQ.SampleApp">
+      <GetFlightOrdersResult xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+        <FlightOrder>
+          <Class>Economy</Class>
+          <CustomerName>Rakesh Krishnan</CustomerName>
+          <DepartureDate>2025-01-14T08:09:00</DepartureDate>
+          <FlightNumber>17979</FlightNumber>
+          <NumberOfTickets>2</NumberOfTickets>
+          <OrderNumber>101</OrderNumber>
+        </FlightOrder>
+      </GetFlightOrdersResult>
+    </GetFlightOrdersResponse>
+  </s:Body>
+</s:Envelope>
+
+2025-01-06 18:15:20,467 [9] INFO  - Structural Validation: True
+2025-01-06 18:15:20,476 [9] INFO  - Checkpoint 12: "Economy" = "Economy" passed
+2025-01-06 18:15:20,479 [9] INFO  - Checkpoint 13: "Rakesh Krishnan" = "Rakesh Krishnan" passed
+2025-01-06 18:15:20,479 [9] INFO  - Checkpoint 14: "17979" = "17979" passed
+2025-01-06 18:15:20,479 [9] INFO  - Checkpoint 15: "2" = "2" passed
+2025-01-06 18:15:20,479 [9] INFO  - Checkpoint 16: "101" = "101" passed
+2025-01-06 18:15:20,479 [9] INFO  - Step 'GetFlightOrders' ended successfully
+2025-01-06 18:15:20,479 [9] INFO  - Step 'UpdateFlightOrder' : Step 'UpdateFlightOrder' started
+2025-01-06 18:15:20,495 [9] INFO  - 
+Request:
+
+<Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/" xmlns:p1="http://www.w3.org/2001/XMLSchema-instance">
+  <Body>
+    <UpdateFlightOrder xmlns="HP.SOAQ.SampleApp">
+      <UpdateFlightOrderDetails>
+        <Class>Business</Class>
+        <CustomerName>Dhanya Rakesh</CustomerName>
+        <NumberOfTickets>3</NumberOfTickets>
+        <OrderNumber>101</OrderNumber>
+      </UpdateFlightOrderDetails>
+    </UpdateFlightOrder>
+  </Body>
+</Envelope>
+
+2025-01-06 18:15:20,497 [9] INFO  - URL: http://localhost:8000/Flights_SOAP
+2025-01-06 18:15:20,505 [9] INFO  - Returning the response to the previous channel
+2025-01-06 18:15:20,507 [9] INFO  - 
+Response:
+
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Body>
+    <UpdateFlightOrderResponse xmlns="HP.SOAQ.SampleApp">
+      <UpdateFlightOrderResult>true</UpdateFlightOrderResult>
+    </UpdateFlightOrderResponse>
+  </s:Body>
+</s:Envelope>
+
+2025-01-06 18:15:20,510 [9] INFO  - Structural Validation: True
+2025-01-06 18:15:20,512 [9] INFO  - Checkpoint 18: "True" = "True" passed
+2025-01-06 18:15:20,512 [9] INFO  - Step 'UpdateFlightOrder' ended successfully
+2025-01-06 18:15:20,512 [9] INFO  - Step 'Iteration 1' ended successfully
+2025-01-06 18:15:20,519 [9] INFO  - Step 'Test Flow' ended successfully
+2025-01-06 18:15:20,519 [9] INFO  - Step 'End' : Step 'End' started
+2025-01-06 18:15:20,530 [9] INFO  - Step 'End' ended successfully

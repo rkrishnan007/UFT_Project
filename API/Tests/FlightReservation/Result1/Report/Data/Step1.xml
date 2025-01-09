@@ -1,0 +1,26 @@
+<?xml-stylesheet href="..//StServiceCallActivity.xsl" type="text/xsl"?><report><VTD_Type name="Type">HP.ST.Ext.WebServicesActivities.StServiceCallActivity</VTD_Type><VTD_Name name="Step ID">StServiceCallActivity4</VTD_Name><InputXml name="InputXml" xml="True" link="True" FileLocation="StServiceCallActivity4_InputXml_2f517acf-b13a-462d-af98-7ee9e2296065.xml">&lt;Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/"&gt;
+  &lt;Body&gt;
+    &lt;GetFlights xmlns="HP.SOAQ.SampleApp"&gt;
+      &lt;DepartureCity&gt;Los Angeles&lt;/DepartureCity&gt;
+      &lt;ArrivalCity&gt;Los Angeles&lt;/ArrivalCity&gt;
+    &lt;/GetFlights&gt;
+  &lt;/Body&gt;
+&lt;/Envelope&gt;</InputXml><Service name="Service">Flights_Service</Service><Port name="Port">FlightsServiceMethods</Port><Operation name="Operation">GetFlights</Operation><Address name="Address">http://localhost:8000/Flights_SOAP</Address><SOAPAction name="SOAPAction">HP.SOAQ.SampleApp/IFlightsSoapService/GetFlights</SOAPAction><ContentType name="ContentType">text/xml; charset=utf-8</ContentType><MessageExchangePattern name="MessageExchangePattern">Request Response</MessageExchangePattern><Full_request name="Full request" TooLong="True" link="True" FileLocation="StServiceCallActivity4_Full_request_39b1a176-492a-4ad4-a8c6-76b12284b230.xml">&lt;?xml version="1.0"? ... &lt;/Body&gt;
+&lt;/Envelope&gt;</Full_request><InputHeader name="InputHeader">SOAPAction:	HP.SOAQ.SampleApp/IFlightsSoapService/GetFlights
+Content-Type:	text/xml; charset=utf-8
+Host:	localhost:8000
+Content-Length:	215
+Connection:	Close
+</InputHeader><OutputHeader name="OutputHeader">Connection:	close
+Content-Length:	238
+Content-Type:	text/xml; charset=utf-8
+Date:	Mon, 06 Jan 2025 10:45:32 GMT
+Server:	Microsoft-HTTPAPI/2.0
+</OutputHeader><OutputText name="OutputText">&lt;s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"&gt;&lt;s:Body&gt;&lt;s:Fault&gt;&lt;faultcode&gt;s:Client&lt;/faultcode&gt;&lt;faultstring xml:lang="en-IN"&gt;Departure and arrival cities must not be the same.&lt;/faultstring&gt;&lt;/s:Fault&gt;&lt;/s:Body&gt;&lt;/s:Envelope&gt;</OutputText><HttpStatusCode name="HttpStatusCode">500 : InternalServerError</HttpStatusCode><OutputXml name="OutputXml" xml="True" link="True" FileLocation="StServiceCallActivity4_OutputXml_19c3c1df-0323-4d0b-a057-088242e68837.xml">&lt;s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"&gt;
+  &lt;s:Body&gt;
+    &lt;s:Fault&gt;
+      &lt;faultcode&gt;s:Client&lt;/faultcode&gt;
+      &lt;faultstring xml:lang="en-IN"&gt;Departure and arrival cities must not be the same.&lt;/faultstring&gt;
+    &lt;/s:Fault&gt;
+  &lt;/s:Body&gt;
+&lt;/s:Envelope&gt;</OutputXml><VTD_Message name="Message">The server has returned a soap fault</VTD_Message><Name name="Name">'GetFlights'</Name><Comment name="Comment">''</Comment><VTD_Status name="Status">Failure</VTD_Status><VTD_Details name="Details">GetFlights ended unsuccessfully</VTD_Details></report>

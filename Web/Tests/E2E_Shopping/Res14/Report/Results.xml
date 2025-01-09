@@ -1,0 +1,522 @@
+﻿<?xml version="1.0"?>
+<!DOCTYPE Report
+[
+<!ELEMENT Report (General ,(Doc|BPT)) >
+<!ATTLIST Report ver CDATA #REQUIRED tmZone CDATA #REQUIRED>
+
+<!ELEMENT General ( DocLocation ) >
+<!ATTLIST General productName CDATA #REQUIRED productVer CDATA #REQUIRED os CDATA #REQUIRED host CDATA #REQUIRED qcserver CDATA #IMPLIED qcproject CDATA #IMPLIED SolManSolutionId CDATA #IMPLIED SolManProjectId CDATA #IMPLIED SolManTestPlanId CDATA #IMPLIED SolManTestPackageId CDATA #IMPLIED SolManUserInfoData CDATA #IMPLIED  >
+
+<!ELEMENT BPT (DName,Res,DVer?,TSet?,TInst?,NodeArgs,AdditionalInfo*,Doc*) >
+<!ATTLIST BPT rID ID #REQUIRED >
+
+<!ELEMENT Doc (DName,ConfName?,Res,DVer?,TSet?,TInst?,RunType?,DT?,AdditionalInfo*,Step*,DIter*,Step*,Action*,Doc*,Summary?,TestMaintenanceSummary*,NodeArgs?) >
+<!ATTLIST Doc rID ID #REQUIRED type (Test|BC|BPTWrapperTest|Flow|Group|Action) "Test" productName CDATA #REQUIRED BCIter CDATA #IMPLIED >
+
+<!ELEMENT RunType ( #PCDATA )>
+<!ATTLIST RunType fmStep (False|True) "False" batch (False|True) "False" upDesc (False|True) "False" upChk (False|True) "False" upAS (False|True) "False">
+
+<!ELEMENT DName ( #PCDATA ) >
+
+<!ELEMENT ConfName ( #PCDATA ) >
+
+<!ELEMENT Res ( #PCDATA ) >
+
+<!ELEMENT AdditionalInfo (AdditionalDataName,AdditionalDataValue ) >
+
+<!ELEMENT AdditionalDataName ( #PCDATA ) >
+
+<!ELEMENT AdditionalDataValue ( #PCDATA ) >
+
+<!ELEMENT DVer ( #PCDATA ) >
+
+<!ELEMENT TSet ( #PCDATA ) >
+
+<!ELEMENT TInst ( #PCDATA ) >
+
+<!ELEMENT DIter (Step*,Action+,Summary?,NodeArgs)>
+<!ATTLIST DIter rID ID #REQUIRED iterID CDATA #REQUIRED>
+
+<!ELEMENT DocLocation ( #PCDATA )>
+
+<!ELEMENT Action (AName,AIter*,(Step|HtmlStep|Action)*, Summary,ActionMaintenanceSummary*, NodeArgs ) >
+<!ATTLIST Action rID ID #REQUIRED>
+
+<!ELEMENT AIter ((Step|HtmlStep|Action)*,DataMapping?, Summary?,NodeArgs) >
+<!ATTLIST AIter rID ID #REQUIRED iterID CDATA #REQUIRED isCountable (False|True) "False" >
+
+<!ELEMENT AName ( #PCDATA ) >
+
+<!ELEMENT TestMaintenanceSummary (ActionMaintenanceSummary*) >
+<!ATTLIST TestMaintenanceSummary ObjectsAdded CDATA #REQUIRED ObjectsUpdated CDATA #REQUIRED StepsUpdated CDATA #REQUIRED StepsComments CDATA #REQUIRED><!ELEMENT ActionMaintenanceSummary (ObjectChange* ) >
+<!ATTLIST ActionMaintenanceSummary Action CDATA #REQUIRED Objects CDATA #REQUIRED Updated CDATA #REQUIRED LinesTotal CDATA #REQUIRED Added CDATA #REQUIRED LinesUpdated CDATA #REQUIRED>
+
+<!ELEMENT ObjectChange  (Hierarchy, PropertyChangeList* ) >
+<!ATTLIST ObjectChange Operation CDATA #IMPLIED OriginalRepository CDATA #IMPLIED>
+
+<!ELEMENT PropertyChangeList (PropertyDef*) >
+
+<!ELEMENT PropertyDef (OriginalValue, NewValue) >
+<!ATTLIST PropertyDef PropName CDATA #REQUIRED OriginRegularExpression (True|False) "False" NewRegularExpression (True|False) "False" AddedProperty (True|False) "False" >
+
+<!ELEMENT OriginalValue ( #PCDATA )>
+
+<!ELEMENT NewValue ( #PCDATA )>
+
+<!ELEMENT Hierarchy  (ObjectName, Hierarchy*) >
+<!ATTLIST Hierarchy MicClass CDATA #REQUIRED>
+
+<!ELEMENT ObjectName  ( #PCDATA ) >
+
+<!ELEMENT Step (Obj,Details,Time,TimeTick* ,(Step|HtmlStep|Doc)*, DataMapping?, NodeArgs) >
+<!ATTLIST Step rID ID #REQUIRED retval CDATA #IMPLIED>
+
+<!ELEMENT HtmlStep (HTML,TimeTick*,(Step|HtmlStep|Doc)*,NodeArgs) >
+<!ATTLIST HtmlStep rID ID #REQUIRED >
+
+<!ELEMENT Obj ( #PCDATA ) >
+<!ATTLIST Obj plainTxt (False|True) "True">
+
+<!ELEMENT Details ( #PCDATA ) >
+<!ATTLIST Details plainTxt (False|True) "True">
+
+<!ELEMENT Time ( #PCDATA ) >
+
+<!ELEMENT HTML ( #PCDATA ) >
+
+<!ELEMENT Disp ( #PCDATA ) >
+
+<!ELEMENT TimeTick ( #PCDATA ) >
+
+<!ELEMENT DataMapping ( DataMappedItem* )>
+<!ELEMENT DataMappedItem EMPTY >
+<!ATTLIST DataMappedItem dsName CDATA #REQUIRED >
+<!ATTLIST DataMappedItem rowId CDATA #REQUIRED >
+
+<!ELEMENT NodeArgs (Disp,TopPane?,BtmPane?,ExtendedInfo? )>
+<!ATTLIST NodeArgs eType CDATA #REQUIRED icon CDATA #REQUIRED nRep CDATA #REQUIRED UserNote CDATA #IMPLIED filter (False|True) "True">
+<!ATTLIST NodeArgs status (Passed|Failed|Done|Warning|Information) "Done">
+<!ATTLIST NodeArgs iconSel CDATA #IMPLIED nType CDATA #IMPLIED MovieMarker CDATA "">
+<!ATTLIST NodeArgs Source CDATA #IMPLIED SourceLine CDATA #IMPLIED StepFlowItemKey CDATA #IMPLIED >
+
+<!ELEMENT TopPane (Path)>
+
+<!ELEMENT BtmPane ( (Path|WR)?,ASHilite?)>
+<!ATTLIST BtmPane vType CDATA "HTML">
+
+<!ELEMENT Path ( #PCDATA ) >
+
+<!ELEMENT ASHilite ( #PCDATA ) >
+
+<!ELEMENT WR ( #PCDATA ) >
+
+<!ELEMENT ExtendedInfo ( StepData ) >
+
+<!ATTLIST ExtendedInfo StepType CDATA #REQUIRED>
+<!ELEMENT DT (NodeArgs) >
+<!ATTLIST DT rID ID #REQUIRED>
+
+<!ELEMENT Summary (Param*)>
+<!ATTLIST Summary sTime CDATA #IMPLIED eTime CDATA #IMPLIED passed CDATA #IMPLIED failed CDATA #IMPLIED warnings CDATA #IMPLIED retval CDATA #IMPLIED stopped (False|True) "False" >
+
+<!ELEMENT Param (ParamName,ParamVal)+ >
+<!ATTLIST Param paramInOut (In|Out) "In">
+
+<!ELEMENT ParamName ( #PCDATA ) >
+
+<!ELEMENT ParamVal ( #PCDATA ) >
+
+]
+>
+<Report ver="2.0" tmZone="India Standard Time">
+<General productName="OpenText Functional Testing" productVer="24.4" os="Windows 11" host="LENOVO-L14-GEN-"><DocLocation><![CDATA[D:\UFT Project\Web\E2E_Shopping]]></DocLocation></General>
+<Doc rID="T1"   productName= "OpenText Functional Testing"  >
+<DName><![CDATA[E2E_Shopping]]></DName>
+<Res><![CDATA[Res14]]></Res>
+<DT rID="T2">
+<NodeArgs eType="Table" icon="2" nRep="4" filter="False" >
+<Disp><![CDATA[Run-Time Data Table]]></Disp>
+<BtmPane vType="Table" >
+<Path><![CDATA[Default.xlsx]]></Path>
+</BtmPane>
+</NodeArgs>
+</DT>
+<DIter rID="T3" iterID="1" >
+<Action rID="T4">
+<AName><![CDATA[Action_Shopping]]></AName>
+<Action rID="T5">
+<AName><![CDATA[Action_Login [Login]]]></AName>
+<Step rID="T6">
+<Obj plainTxt="False" ><![CDATA[SystemUtil]]></Obj>
+<Details plainTxt="False" ><![CDATA[SystemUtil]]></Details>
+<Time><![CDATA[17-12-2024 - 11:30:43]]></Time>
+<TimeTick>1734415243</TimeTick>
+<Step rID="T7">
+<Obj plainTxt="False" ><![CDATA[Run "C:\Program Files\Google\Chrome\Application\chrome.exe",1]]></Obj>
+<Details plainTxt="False" ><![CDATA[Run "C:\Program Files\Google\Chrome\Application\chrome.exe",1]]></Details>
+<Time><![CDATA[17-12-2024 - 11:30:43]]></Time>
+<TimeTick>1734415243</TimeTick>
+<NodeArgs eType="Replay" icon="6" nRep="12" status="Passed" Source="Action_Login [Login]" SourceLine="0" >
+<Disp><![CDATA[Run "C:\Program Files\Google\Chrome\Application\chrome.exe",1]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Replay" icon="6" nRep="11" status="Passed" Source="Action_Login [Login]" SourceLine="0" >
+<Disp><![CDATA[SystemUtil]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T8">
+<Obj plainTxt="False" ><![CDATA[Demo Web Shop]]></Obj>
+<Details plainTxt="False" ><![CDATA[<table><tr><td><span style="text-align : left; font-size : 12px; ">Local Browser</span></td></tr></table>]]></Details>
+<Time><![CDATA[17-12-2024 - 11:31:03]]></Time>
+<TimeTick>1734415263</TimeTick>
+<Step rID="T9">
+<Obj plainTxt="False" ><![CDATA[Demo Web Shop.Maximize]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[17-12-2024 - 11:31:03]]></Time>
+<TimeTick>1734415263</TimeTick>
+<NodeArgs eType="Replay" icon="7" nRep="15" Source="Action_Login [Login]" SourceLine="1" >
+<Disp><![CDATA[Demo Web Shop.Maximize]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T10">
+<Obj plainTxt="False" ><![CDATA[Demo Web Shop - Landing Page]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[17-12-2024 - 11:31:03]]></Time>
+<TimeTick>1734415263</TimeTick>
+<Step rID="T11">
+<Obj plainTxt="False" ><![CDATA[Log in.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[17-12-2024 - 11:31:03]]></Time>
+<TimeTick>1734415263</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="18" Source="Action_Login [Login]" SourceLine="6" >
+<Disp><![CDATA[Log in.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="17" Source="Action_Login [Login]" SourceLine="6" >
+<Disp><![CDATA[Demo Web Shop - Landing Page]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T12">
+<Obj plainTxt="False" ><![CDATA[Demo Web Shop. Login]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[17-12-2024 - 11:31:06]]></Time>
+<TimeTick>1734415266</TimeTick>
+<Step rID="T13">
+<Obj plainTxt="False" ><![CDATA[Email.Set]]></Obj>
+<Details plainTxt="False" ><![CDATA["rakesh_demo@gmail.com"]]></Details>
+<Time><![CDATA[17-12-2024 - 11:31:06]]></Time>
+<TimeTick>1734415266</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="21" Source="Action_Login [Login]" SourceLine="8" >
+<Disp><![CDATA[Email.Set]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T14">
+<Obj plainTxt="False" ><![CDATA[Password.Set]]></Obj>
+<Details plainTxt="False" ><![CDATA["Ramos@12345"]]></Details>
+<Time><![CDATA[17-12-2024 - 11:31:06]]></Time>
+<TimeTick>1734415266</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="23" Source="Action_Login [Login]" SourceLine="9" >
+<Disp><![CDATA[Password.Set]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T15">
+<Obj plainTxt="False" ><![CDATA[Log in.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[17-12-2024 - 11:31:06]]></Time>
+<TimeTick>1734415266</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="25" Source="Action_Login [Login]" SourceLine="10" >
+<Disp><![CDATA[Log in.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="20" Source="Action_Login [Login]" SourceLine="8" >
+<Disp><![CDATA[Demo Web Shop. Login]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T16">
+<Obj plainTxt="False" ><![CDATA[Demo Web Shop - Landing Page]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[17-12-2024 - 11:31:28]]></Time>
+<TimeTick>1734415288</TimeTick>
+<Step rID="T17">
+<Obj plainTxt="False" ><![CDATA["Logged_Email"- Description mismatch]]></Obj>
+<Details plainTxt="False" ><![CDATA[The object was not found using the test object description. Check the object's properties.]]></Details>
+<Time><![CDATA[17-12-2024 - 11:31:28]]></Time>
+<TimeTick>1734415288</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="66" status="Warning" >
+<Disp><![CDATA["Logged_Email"- Description mismatch]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T18">
+<Obj plainTxt="False" ><![CDATA["Logged_Email"- Smart Identification]]></Obj>
+<Details plainTxt="False" ><![CDATA[<P><span class="text">The smart identification mechanism was invoked.</span></P><P><SPAN class=text>Reason: object not found.</SPAN></P>           <SPAN class=text><b>Original description:</b></SPAN><br>text=*@gmail.com<br>micclass=Link<br>html tag=A<br><P><FONT face=Verdana size=2><SPAN class=text><B>Smart Identification Alternative Description: </B></SPAN></FONT></P><FONT face=Verdana size=2><u>Base filter properties (87 objects found)&nbsp;</FONT></u><br>
+micclass=Link<br>html tag=A<br><br><FONT face=Verdana size=2><u>Optional filter properties</FONT></u><br>
+text=*@gmail.com<SPAN class=Failed> (Skipped)</SPAN><br>html id=<SPAN class=passed> (Used</SPAN>, 87 matches)</SPAN><br>class=account<SPAN class=passed> (Used</SPAN>, 2 matches)</SPAN><br>name=rakesh_demo@gmail.com<SPAN class=passed> (Used</SPAN>, 1 matches)</SPAN><br>href=https://demowebshop.tricentis.com/customer/info<SPAN class=warning> (Ignored)<FONT color=#000000></FONT></SPAN><br>visible=-1<SPAN class=warning> (Ignored)<FONT color=#000000></FONT></SPAN><br>acc_name=<SPAN class=warning> (Ignored)<FONT color=#000000></FONT></SPAN><br>]]></Details>
+<Time><![CDATA[17-12-2024 - 11:31:28]]></Time>
+<TimeTick>1734415288</TimeTick>
+<NodeArgs eType="Replay" icon="12" nRep="67" >
+<Disp><![CDATA["Logged_Email"- Smart Identification]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="65" status="Warning" >
+<Disp><![CDATA[Demo Web Shop - Landing Page]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="7" nRep="14" status="Warning" Source="Action_Login [Login]" SourceLine="1" >
+<Disp><![CDATA[Demo Web Shop]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T19">
+<Obj ><![CDATA[ Successfully Logged in with rakesh_demo@gmail.com]]></Obj>
+<Details ><![CDATA[ Successfully Logged in with rakesh_demo@gmail.com]]></Details>
+<Time><![CDATA[17-12-2024 - 11:31:28]]></Time>
+<TimeTick>1734415288</TimeTick>
+<NodeArgs eType="User" icon="13" nRep="68" status="Passed" >
+<Disp><![CDATA[ Successfully Logged in with rakesh_demo@gmail.com]]></Disp>
+</NodeArgs>
+</Step>
+<Summary sTime="17-12-2024 - 11:30:42" eTime="17-12-2024 - 11:31:28" passed="2" failed="0" warnings="1" ><Param paramInOut = "In"><ParamName><![CDATA[Email]]></ParamName><ParamVal><![CDATA[rakesh_demo@gmail.com]]></ParamVal>
+</Param>
+<Param paramInOut = "In"><ParamName><![CDATA[Password]]></ParamName><ParamVal><![CDATA[Ramos@12345]]></ParamVal>
+</Param>
+</Summary>
+<NodeArgs eType="StartAction" icon="5" nRep="8" status="Warning" >
+<Disp><![CDATA[Action_Login [Login] Summary]]></Disp>
+</NodeArgs>
+</Action>
+<Action rID="T20">
+<AName><![CDATA[ShoppingProducts [SelectProducts]]]></AName>
+<Step rID="T21">
+<Obj plainTxt="False" ><![CDATA[Demo Web Shop]]></Obj>
+<Details plainTxt="False" ><![CDATA[<table><tr><td><span style="text-align : left; font-size : 12px; ">Local Browser</span></td></tr></table>]]></Details>
+<Time><![CDATA[17-12-2024 - 11:31:52]]></Time>
+<TimeTick>1734415312</TimeTick>
+<Step rID="T22">
+<Obj plainTxt="False" ><![CDATA[Demo Web Shop - Shopping Page]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[17-12-2024 - 11:31:52]]></Time>
+<TimeTick>1734415312</TimeTick>
+<Step rID="T23">
+<Obj plainTxt="False" ><![CDATA[Apparel & Shoes.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[17-12-2024 - 11:31:52]]></Time>
+<TimeTick>1734415312</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="74" Source="ShoppingProducts [SelectProducts]" SourceLine="1" >
+<Disp><![CDATA[Apparel & Shoes.Click]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T24">
+<Obj plainTxt="False" ><![CDATA[AIUtil.SetContext]]></Obj>
+<Details plainTxt="False" ><![CDATA[Set context Browser("[ Demo Web Shop. Apparel & Shoes ]") for AIUtil]]></Details>
+<Time><![CDATA[17-12-2024 - 11:32:02]]></Time>
+<TimeTick>1734415322</TimeTick>
+<NodeArgs eType="Replay" icon="0" nRep="75" nType="AIUtil" Source="ShoppingProducts [SelectProducts]" SourceLine="8" >
+<Disp><![CDATA[AIUtil.SetContext]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T25">
+<Obj plainTxt="False" ><![CDATA[AIUtil.FindTextBlock("Add to cart", micFromLeft, 3).Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[17-12-2024 - 11:32:03]]></Time>
+<TimeTick>1734415323</TimeTick>
+<NodeArgs eType="Replay" icon="14" nRep="77" Source="ShoppingProducts [SelectProducts]" SourceLine="9" >
+<Disp><![CDATA[AIUtil.FindTextBlock("Add to cart", micFromLeft, 3).Click]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T26">
+<Obj plainTxt="False" ><![CDATA[AIUtil.FindTextBlock("Add to cart", micFromLeft, 4).Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[17-12-2024 - 11:32:11]]></Time>
+<TimeTick>1734415331</TimeTick>
+<NodeArgs eType="Replay" icon="14" nRep="79" Source="ShoppingProducts [SelectProducts]" SourceLine="10" >
+<Disp><![CDATA[AIUtil.FindTextBlock("Add to cart", micFromLeft, 4).Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="73" Source="ShoppingProducts [SelectProducts]" SourceLine="1" >
+<Disp><![CDATA[Demo Web Shop - Shopping Page]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="7" nRep="72" Source="ShoppingProducts [SelectProducts]" SourceLine="1" >
+<Disp><![CDATA[Demo Web Shop]]></Disp>
+</NodeArgs>
+</Step>
+<Summary sTime="17-12-2024 - 11:31:30" eTime="17-12-2024 - 11:32:11" passed="0" failed="0" warnings="0" ></Summary>
+<NodeArgs eType="StartAction" icon="5" nRep="70" >
+<Disp><![CDATA[ShoppingProducts [SelectProducts] Summary]]></Disp>
+</NodeArgs>
+</Action>
+<Action rID="T27">
+<AName><![CDATA[Action_ShoppingCart [ShoppingCart]]]></AName>
+<Step rID="T28">
+<Obj plainTxt="False" ><![CDATA[Demo Web Shop]]></Obj>
+<Details plainTxt="False" ><![CDATA[<table><tr><td><span style="text-align : left; font-size : 12px; ">Local Browser</span></td></tr></table>]]></Details>
+<Time><![CDATA[17-12-2024 - 11:32:55]]></Time>
+<TimeTick>1734415375</TimeTick>
+<Step rID="T29">
+<Obj plainTxt="False" ><![CDATA[Demo Web Shop. Apparel]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[17-12-2024 - 11:32:55]]></Time>
+<TimeTick>1734415375</TimeTick>
+<Step rID="T30">
+<Obj plainTxt="False" ><![CDATA[Shopping cart]]></Obj>
+<Details plainTxt="False" ><![CDATA[Cannot&nbsp;identify&nbsp;the&nbsp;object&nbsp;"Shopping&nbsp;cart"&nbsp;(of&nbsp;class&nbsp;Link).<br/>Verify&nbsp;that&nbsp;this&nbsp;object's&nbsp;properties&nbsp;match&nbsp;an&nbsp;object&nbsp;currently&nbsp;displayed&nbsp;in&nbsp;your&nbsp;application.]]></Details>
+<Time><![CDATA[17-12-2024 - 11:32:55]]></Time>
+<TimeTick>1734415375</TimeTick>
+<Step rID="T31">
+<Obj plainTxt="False" ><![CDATA[Shopping cart]]></Obj>
+<Details plainTxt="False" ><![CDATA[Object's physical description:<br>miccommentproperty = <br>Mercury Class = Link<br>Html Tag = A<br>_xpath = //LI[@id="topcartlink"]/A[normalize-space()="Shopping cart (2)"]<br>|Visible = -1<br>Text = Shopping cart (.*<br>Name = Shopping cart (2)<br>Html Id = <br>Href = https://demowebshop.tricentis.com/cart<br>DHTML Class = ico-cart<br>acc_name = <br>]]></Details>
+<Time><![CDATA[17-12-2024 - 11:32:55]]></Time>
+<TimeTick>1734415375</TimeTick>
+<NodeArgs eType="Replay" icon="15" nRep="128" status="Warning" nType="Description" Source="Action_ShoppingCart [ShoppingCart]" SourceLine="0" >
+<Disp><![CDATA[Shopping cart]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Replay" icon="9" nRep="127" status="Failed" nType="Run Error" Source="Action_ShoppingCart [ShoppingCart]" SourceLine="0" >
+<Disp><![CDATA[Shopping cart]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="126" status="Failed" Source="Action_ShoppingCart [ShoppingCart]" SourceLine="0" >
+<Disp><![CDATA[Demo Web Shop. Apparel]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="7" nRep="125" status="Failed" Source="Action_ShoppingCart [ShoppingCart]" SourceLine="0" >
+<Disp><![CDATA[Demo Web Shop]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T32">
+<Obj plainTxt="False" ><![CDATA[Demo Web Shop]]></Obj>
+<Details plainTxt="False" ><![CDATA[<table><tr><td><span style="text-align : left; font-size : 12px; ">Local Browser</span></td></tr></table>]]></Details>
+<Time><![CDATA[17-12-2024 - 11:32:55]]></Time>
+<TimeTick>1734415375</TimeTick>
+<Step rID="T33">
+<Obj plainTxt="False" ><![CDATA[Run Error]]></Obj>
+<Details plainTxt="False" ><![CDATA[Cannot identify the object &quot;Shopping cart&quot; (of class Link).<BR/>Verify that this object's properties match an object currently displayed in your application.<BR/>Line (1): &quot;Browser(&quot;Demo Web Shop&quot;).Page(&quot;Demo Web Shop. Apparel&quot;).Link(&quot;Shopping cart&quot;).Click&quot;. ]]></Details>
+<Time><![CDATA[17-12-2024 - 11:32:55]]></Time>
+<TimeTick>1734415375</TimeTick>
+<NodeArgs eType="Replay" icon="15" nRep="130" status="Failed" Source="Action_ShoppingCart [ShoppingCart]" SourceLine="0" >
+<Disp><![CDATA[Run Error]]></Disp>
+<BtmPane vType="ViewerGen.SSViewerGen" >
+<Path><![CDATA[ZIP::Act4\Row0\ssf2.xml]]></Path>
+<ASHilite><![CDATA[199720]]></ASHilite>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T34">
+<Obj plainTxt="False" ><![CDATA[Demo Web Shop- Shopping Cart]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[17-12-2024 - 11:33:16]]></Time>
+<TimeTick>1734415396</TimeTick>
+<Step rID="T35">
+<Obj plainTxt="False" ><![CDATA[ProductTable.RowCount]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[17-12-2024 - 11:33:16]]></Time>
+<TimeTick>1734415396</TimeTick>
+<NodeArgs eType="Replay" icon="16" nRep="133" Source="Action_ShoppingCart [ShoppingCart]" SourceLine="8" >
+<Disp><![CDATA[ProductTable.RowCount]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T36">
+<Obj plainTxt="False" ><![CDATA["ProductTable":Function Call]]></Obj>
+<Details plainTxt="False" ><![CDATA[RowCount]]></Details>
+<Time><![CDATA[17-12-2024 - 11:33:16]]></Time>
+<TimeTick>1734415396</TimeTick>
+<NodeArgs eType="General" icon="16" nRep="135" >
+<Disp><![CDATA["ProductTable":Function Call]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T37">
+<Obj plainTxt="False" ><![CDATA["ProductTable":Function Call]]></Obj>
+<Details plainTxt="False" ><![CDATA[CellText]]></Details>
+<Time><![CDATA[17-12-2024 - 11:33:17]]></Time>
+<TimeTick>1734415397</TimeTick>
+<NodeArgs eType="General" icon="16" nRep="136" >
+<Disp><![CDATA["ProductTable":Function Call]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T38">
+<Obj plainTxt="False" ><![CDATA["ProductTable":Function Call]]></Obj>
+<Details plainTxt="False" ><![CDATA[CellText]]></Details>
+<Time><![CDATA[17-12-2024 - 11:33:20]]></Time>
+<TimeTick>1734415400</TimeTick>
+<NodeArgs eType="General" icon="16" nRep="137" >
+<Disp><![CDATA["ProductTable":Function Call]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="132" Source="Action_ShoppingCart [ShoppingCart]" SourceLine="8" >
+<Disp><![CDATA[Demo Web Shop- Shopping Cart]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="7" nRep="129" status="Failed" Source="Action_ShoppingCart [ShoppingCart]" SourceLine="0" >
+<Disp><![CDATA[Demo Web Shop]]></Disp>
+<BtmPane vType="ViewerGen.SSViewerGen" >
+<Path><![CDATA[ZIP::Act4\Row0\ssf1.xml]]></Path>
+<ASHilite><![CDATA[199720]]></ASHilite>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T39">
+<Obj ><![CDATA[Casual Golf Belt]]></Obj>
+<Details ><![CDATA[Casual Golf Belt is selected and is displayed in the Cart]]></Details>
+<Time><![CDATA[17-12-2024 - 11:33:20]]></Time>
+<TimeTick>1734415400</TimeTick>
+<NodeArgs eType="User" icon="13" nRep="138" status="Passed" Source="Action_ShoppingCart [ShoppingCart]" SourceLine="24" >
+<Disp><![CDATA[Casual Golf Belt]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T40">
+<Obj plainTxt="False" ><![CDATA[Demo Web Shop]]></Obj>
+<Details plainTxt="False" ><![CDATA[<table><tr><td><span style="text-align : left; font-size : 12px; ">Local Browser</span></td></tr></table>]]></Details>
+<Time><![CDATA[17-12-2024 - 11:33:20]]></Time>
+<TimeTick>1734415400</TimeTick>
+<Step rID="T41">
+<Obj plainTxt="False" ><![CDATA[Demo Web Shop- Shopping Cart]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[17-12-2024 - 11:33:20]]></Time>
+<TimeTick>1734415400</TimeTick>
+<Step rID="T42">
+<Obj plainTxt="False" ><![CDATA["ProductTable":Function Call]]></Obj>
+<Details plainTxt="False" ><![CDATA[CellText]]></Details>
+<Time><![CDATA[17-12-2024 - 11:33:20]]></Time>
+<TimeTick>1734415400</TimeTick>
+<NodeArgs eType="General" icon="16" nRep="141" >
+<Disp><![CDATA["ProductTable":Function Call]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="140" Source="Action_ShoppingCart [ShoppingCart]" SourceLine="16" >
+<Disp><![CDATA[Demo Web Shop- Shopping Cart]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="7" nRep="139" Source="Action_ShoppingCart [ShoppingCart]" SourceLine="16" >
+<Disp><![CDATA[Demo Web Shop]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T43">
+<Obj ><![CDATA[Casual Golf Belt]]></Obj>
+<Details ><![CDATA[Casual Golf Belt is not selected and is not displayed in the Cart]]></Details>
+<Time><![CDATA[17-12-2024 - 11:33:20]]></Time>
+<TimeTick>1734415400</TimeTick>
+<NodeArgs eType="User" icon="13" nRep="142" status="Failed" Source="Action_ShoppingCart [ShoppingCart]" SourceLine="26" >
+<Disp><![CDATA[Casual Golf Belt]]></Disp>
+</NodeArgs>
+</Step>
+<Summary sTime="17-12-2024 - 11:32:13" eTime="17-12-2024 - 11:33:20" passed="1" failed="3" warnings="1" ><Param paramInOut = "In"><ParamName><![CDATA[Products]]></ParamName><ParamVal><![CDATA[Blue Jeans|Casual Golf Belt]]></ParamVal>
+</Param>
+</Summary>
+<NodeArgs eType="StartAction" icon="5" nRep="81" status="Failed" >
+<Disp><![CDATA[Action_ShoppingCart [ShoppingCart] Summary]]></Disp>
+</NodeArgs>
+</Action>
+<Summary sTime="17-12-2024 - 11:30:41" eTime="17-12-2024 - 11:33:20" passed="0" failed="0" warnings="0" ></Summary>
+<NodeArgs eType="StartAction" icon="4" nRep="7" status="Failed" >
+<Disp><![CDATA[Action_Shopping Summary]]></Disp>
+</NodeArgs>
+</Action>
+<NodeArgs eType="StartIteration" icon="3" nRep="6" status="Failed" >
+<Disp><![CDATA[E2E_Shopping Iteration 1 (Row 1)]]></Disp>
+</NodeArgs>
+</DIter>
+<Summary sTime="17-12-2024 - 11:30:39" eTime="17-12-2024 - 11:33:20" passed="3" failed="3" warnings="2" ></Summary>
+<NodeArgs eType="StartTest" icon="1" nRep="3" status="Failed" >
+<Disp><![CDATA[Test E2E_Shopping Summary]]></Disp>
+</NodeArgs>
+</Doc>
+</Report>

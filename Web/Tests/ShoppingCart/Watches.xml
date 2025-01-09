@@ -1,0 +1,5 @@
+﻿<Properties>
+  <WatchEntry0 value="Browser(&quot;Demo Web Shop. Apparel&quot;).Page(&quot;Demo Web Shop. Apparel&quot;).Link(&quot;Shopping cart&quot;).Count()" />
+  <WatchEntry1 value="ArrProducts(j)" />
+  <WatchEntry2 value="j" />
+</Properties>

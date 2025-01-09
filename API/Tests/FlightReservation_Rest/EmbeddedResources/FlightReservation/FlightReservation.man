@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ResourceManifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ID>bfa5009f-9f39-4603-a80d-a4db8ce38b9a</ID>
+  <Name>FlightReservation</Name>
+  <Type>REST</Type>
+  <Version>4</Version>
+  <CreationDate>2025-01-06T17:24:27.5179652+05:30</CreationDate>
+  <UpdateDate>2025-01-06T17:48:49.0630686+05:30</UpdateDate>
+  <LoaderID>SignatureResourceHandler</LoaderID>
+  <MetaDataSignatureFile>e42ac6a9-428d-4a8e-8e61-72e328c718c3.xml</MetaDataSignatureFile>
+  <TestResourceId>e42ac6a9-428d-4a8e-8e61-72e328c718c3</TestResourceId>
+  <RepositoryType>TestRepository</RepositoryType>
+  <SignatureCodonId>HP.ST.RestDesignTime.RestServicesV2</SignatureCodonId>
+  <SignatureAddinVersion>2024.4.0.146</SignatureAddinVersion>
+  <Properties>
+    <Item>
+      <Key>
+        <string>RepositoryPath</string>
+      </Key>
+      <Value>
+        <string>D:\UFT Project\API\Tests\FlightReservation_Rest\EmbeddedResources</string>
+      </Value>
+    </Item>
+    <Item>
+      <Key>
+        <string>ResourceOrigin</string>
+      </Key>
+      <Value>
+        <string>D:\UFT Project\API\Tests\FlightReservation_Rest\EmbeddedResources\FlightReservation</string>
+      </Value>
+    </Item>
+    <Item>
+      <Key>
+        <string>PrototypeDbVersion</string>
+      </Key>
+      <Value>
+        <string>2024.4.0.146</string>
+      </Value>
+    </Item>
+  </Properties>
+</ResourceManifest>

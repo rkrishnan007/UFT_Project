@@ -1,0 +1,10 @@
+﻿Function VerifyInnerText( p_Obj,p_Text,p_Pass_Message,p_Fail_Message)
+	Set Obj = p_Obj
+	strText = Obj.GetROProperty("innertext")
+	If p_Text= strText Then
+		Reporter.ReportEvent micPass,p_Pass_Message,p_Pass_Message
+	Else
+		Reporter.ReportEvent  micFail,p_Fail_Message,p_Fail_Message
+	End If
+End Function
+

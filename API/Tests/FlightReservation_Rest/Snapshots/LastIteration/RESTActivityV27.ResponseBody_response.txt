@@ -1,0 +1,1 @@
+<Flight xmlns="HP.SOAQ.SampleApp" xmlns:i="http://www.w3.org/2001/XMLSchema-instance"><Airline>DA</Airline><ArrivalCity>Seattle</ArrivalCity><ArrivalTime>05:31 PM</ArrivalTime><DepartureCity>San Francisco</DepartureCity><DepartureTime>03:51 PM</DepartureTime><FlightNumber>1023</FlightNumber><Price>149</Price></Flight>

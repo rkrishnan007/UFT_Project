@@ -1,0 +1,67 @@
+2025-01-06 17:35:12,909 [1] ERROR - Exception while setting property
+System.Exception: value assignment for Complex nodes is not supported
+   at HP.ST.Fwk.DesignerModel.XsdPropertyNode.set_Value(String value)
+2025-01-06 17:44:49,678 [1] ERROR - Exception while setting property
+System.Exception: value assignment for Complex nodes is not supported
+   at HP.ST.Fwk.DesignerModel.XsdPropertyNode.set_Value(String value)
+2025-01-06 17:48:52,086 [1] ERROR - Exception while setting property
+System.Exception: value assignment for Complex nodes is not supported
+   at HP.ST.Fwk.DesignerModel.XsdPropertyNode.set_Value(String value)
+2025-01-06 18:03:39,706 [1] ERROR - Exception while setting property
+System.Exception: value assignment for Complex nodes is not supported
+   at HP.ST.Fwk.DesignerModel.XsdPropertyNode.set_Value(String value)
+2025-01-06 18:03:42,156 [1] ERROR - Exception while setting property
+System.Exception: value assignment for Complex nodes is not supported
+   at HP.ST.Fwk.DesignerModel.XsdPropertyNode.set_Value(String value)
+2025-01-06 18:03:43,597 [1] ERROR - Exception while setting property
+System.Exception: value assignment for Complex nodes is not supported
+   at HP.ST.Fwk.DesignerModel.XsdPropertyNode.set_Value(String value)
+2025-01-06 18:04:00,121 [1] ERROR - Exception while setting property
+System.Exception: value assignment for Complex nodes is not supported
+   at HP.ST.Fwk.DesignerModel.XsdPropertyNode.set_Value(String value)
+2025-01-06 18:04:25,168 [1] ERROR - Error when trying to load XML
+System.Xml.XmlException: Data at the root level is invalid. Line 1, position 1.
+   at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   at System.Xml.XmlTextReaderImpl.ParseRootLevelWhitespace()
+   at System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   at System.Xml.XmlTextReaderImpl.Read()
+   at System.Xml.XmlLoader.Load(XmlDocument doc, XmlReader reader, Boolean preserveWhitespace)
+   at System.Xml.XmlDocument.Load(XmlReader reader)
+   at System.Xml.XmlDocument.Load(Stream inStream)
+   at HP.ST.Shared.XmlGridModel.ValidationUtils.ValidateXmlToSchema(Stream stream, XmlSchemaSet schemaSet, ValidationLevel level, List`1& validationErrors)
+2025-01-06 18:04:25,375 [1] ERROR - Error when trying to load XML
+System.Xml.XmlException: Data at the root level is invalid. Line 1, position 1.
+   at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   at System.Xml.XmlTextReaderImpl.ParseRootLevelWhitespace()
+   at System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   at System.Xml.XmlTextReaderImpl.Read()
+   at System.Xml.XmlLoader.Load(XmlDocument doc, XmlReader reader, Boolean preserveWhitespace)
+   at System.Xml.XmlDocument.Load(XmlReader reader)
+   at System.Xml.XmlDocument.Load(Stream inStream)
+   at HP.ST.Shared.XmlGridModel.ValidationUtils.ValidateXmlToSchema(Stream stream, XmlSchemaSet schemaSet, ValidationLevel level, List`1& validationErrors)
+2025-01-06 18:05:22,174 [1] ERROR - Error when trying to load XML
+System.Xml.XmlException: Data at the root level is invalid. Line 1, position 1.
+   at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   at System.Xml.XmlTextReaderImpl.ParseRootLevelWhitespace()
+   at System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   at System.Xml.XmlTextReaderImpl.Read()
+   at System.Xml.XmlLoader.Load(XmlDocument doc, XmlReader reader, Boolean preserveWhitespace)
+   at System.Xml.XmlDocument.Load(XmlReader reader)
+   at System.Xml.XmlDocument.Load(Stream inStream)
+   at HP.ST.Shared.XmlGridModel.ValidationUtils.ValidateXmlToSchema(Stream stream, XmlSchemaSet schemaSet, ValidationLevel level, List`1& validationErrors)
+2025-01-06 18:05:22,380 [1] ERROR - Error when trying to load XML
+System.Xml.XmlException: Data at the root level is invalid. Line 1, position 1.
+   at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   at System.Xml.XmlTextReaderImpl.ParseRootLevelWhitespace()
+   at System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   at System.Xml.XmlTextReaderImpl.Read()
+   at System.Xml.XmlLoader.Load(XmlDocument doc, XmlReader reader, Boolean preserveWhitespace)
+   at System.Xml.XmlDocument.Load(XmlReader reader)
+   at System.Xml.XmlDocument.Load(Stream inStream)
+   at HP.ST.Shared.XmlGridModel.ValidationUtils.ValidateXmlToSchema(Stream stream, XmlSchemaSet schemaSet, ValidationLevel level, List`1& validationErrors)
+2025-01-06 18:47:01,382 [1] ERROR - Failed validating schema
+Xml document is not fully validated
